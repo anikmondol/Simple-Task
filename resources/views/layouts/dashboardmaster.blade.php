@@ -11,7 +11,7 @@
 
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('dashboard') }}/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="{{ asset('dashboard') }}/assets/images/logo-sm.png">
 
     <link href="{{ asset('dashboard') }}/assets/libs/morris.js/morris.css" rel="stylesheet" type="text/css" />
 

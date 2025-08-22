@@ -24,11 +24,25 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $expenses = Expense::with('user')->latest()->get();
+        $currentMonth = now()->month;
+        $currentYear = now()->year;
+
+        $expenses = Expense::with('user')
+            ->whereYear('date', $currentYear)
+            ->whereMonth('date', $currentMonth)
+            ->orderBy('id', 'desc')
+            ->get();
 
 
         $totalAmount = $expenses->sum('amount');
 
-        return view('dashboard.home.index', compact('expenses', 'totalAmount'));
+
+        $categories = ['Food', 'Transport', 'Shopping', 'Others'];
+        $categoryTotals = [];
+        foreach ($categories as $cat) {
+            $categoryTotals[$cat] = $expenses->where('category', $cat)->sum('amount');
+        }
+
+        return view('dashboard.home.index', compact('expenses', 'totalAmount', 'categories', 'categoryTotals'));
     }
 }

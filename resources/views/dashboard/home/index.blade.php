@@ -7,6 +7,19 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
+                    <div class="mt-5">
+                        <h5 class="mb-3">Monthly Expenses by Category</h5>
+                        <canvas id="categoryChart" style="height: 450px; width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
 
                     <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
                         <h4> Expense Tracker</h4>
@@ -51,19 +64,16 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6" class="text-center">No expenses found.</td>
+                                    <td colspan="7" class="text-center">No expenses found.</td>
                                 </tr>
                             @endforelse
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th colspan="3" class="text-end">Total:</th>
-                                <th>{{ number_format($totalAmount, 2) }}</th>
-                                <th colspan="2"></th>
+                                <th colspan="7" class="text-center">Total: {{ number_format($totalAmount, 2) }}</th>
                             </tr>
                         </tfoot>
                     </table>
-
                 </div> <!-- end card body-->
             </div> <!-- end card -->
         </div><!-- end col-->
@@ -74,6 +84,42 @@
 @endsection
 
 @section('script')
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('categoryChart').getContext('2d');
+        const categoryChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: {!! json_encode($categories) !!},
+                datasets: [{
+                    label: 'Expenses by Category (Monthly)',
+                    data: {!! json_encode(array_values($categoryTotals)) !!},
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
     @if (session('success'))
         <script>
             Toastify({
