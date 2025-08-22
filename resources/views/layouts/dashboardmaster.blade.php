@@ -47,9 +47,6 @@
     <link href="{{ asset('dashboard') }}/assets/libs/quill/quill.bubble.css" rel="stylesheet" type="text/css" />
     <link href="{{ asset('dashboard') }}/assets/libs/quill/quill.snow.css" rel="stylesheet" type="text/css" />
 
-    <!-- App css -->
-    {{-- <link href="{{ asset('dashboard') }}/assets/css/style.min.css" rel="stylesheet" type="text/css">
-    <link href="{{ asset('dashboard') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css"> --}}
     <script src="{{ asset('dashboard') }}/assets/js/config.js"></script>
 
 
@@ -214,16 +211,12 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
-                            <div>
-                                <script>
-                                    document.write(new Date().getFullYear())
-                                </script> © Anik Mondal
-                            </div>
+
                         </div>
                         <div class="col-md-6">
                             <div class="d-none d-md-flex gap-4 align-item-center justify-content-md-end">
-                                <p class="mb-0">Design & Develop by <a href="https://comcitybd.com/"
-                                        target="_blank">Computer City Technologies</a> </p>
+                                <p class="mb-0">Design & Develop by <a href="https://anik-dev.musicarenabd.com/"
+                                        target="_blank">Anik Mondal</a> </p>
                             </div>
                         </div>
                     </div>

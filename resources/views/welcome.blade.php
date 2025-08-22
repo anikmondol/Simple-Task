@@ -2,8 +2,7 @@
 <html lang="en" data-bs-theme="light" data-menu-color="brand" data-topbar-color="light">
 
 
-<!-- Mirrored from myrathemes.com/dashtrap/pages-login by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2024 03:40:33 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8" />
     <title>Log In | Dashtrap - Responsive Bootstrap 5 Admin Dashboard</title>
@@ -77,14 +76,7 @@
                 </div>
                 <!-- end card -->
 
-                <div class="row mt-3">
-                    <div class="col-12 text-center">
-                        @if (Route::has('password.request'))
-                        <p class="text-white-50"> <a class='text-white-50 ms-1' href='{{ route('password.request') }}'>Forgot your password?</a></p>
-                        @endif
-                        <p class="text-white-50">Don't have an account? <a class='text-white font-weight-medium ms-1' href='javascript:void(0)'>Sign Up</a></p>
-                    </div> <!-- end col -->
-                </div>
+
                 <!-- end row -->
 
             </div> <!-- end col -->
@@ -97,7 +89,4 @@
     <script src="{{ asset('dashboard') }}/assets/js/app.js"></script>
 
 </body>
-
-
-<!-- Mirrored from myrathemes.com/dashtrap/pages-login by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2024 03:40:33 GMT -->
 </html>

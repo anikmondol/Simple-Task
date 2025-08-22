@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light" data-menu-color="brand" data-topbar-color="light">
 
 
 <!-- Mirrored from myrathemes.com/dashtrap/pages-register by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2024 03:40:33 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
 <head>
     <meta charset="utf-8" />
     <title>Register & Signup | Dashtrap - Responsive Bootstrap 5 Admin Dashboard</title>
@@ -30,11 +30,13 @@
 
                         <div class="text-center w-75 mx-auto auth-logo mb-4">
                             <a class='logo-dark' href='index.html'>
-                                <span><img src="{{ asset('dashboard') }}/assets/images/logo-dark.png" alt="" height="22"></span>
+                                <span><img src="{{ asset('dashboard') }}/assets/images/logo-dark.png" alt=""
+                                        height="22"></span>
                             </a>
 
                             <a class='logo-light' href='index.html'>
-                                <span><img src="{{ asset('dashboard') }}/assets/images/logo-light.png" alt="" height="22"></span>
+                                <span><img src="{{ asset('dashboard') }}/assets/images/logo-light.png" alt=""
+                                        height="22"></span>
                             </a>
                         </div>
 
@@ -42,7 +44,9 @@
                             @csrf
                             <div class="form-group mb-3">
                                 <label class="form-label" for="name">Name</label>
-                                <input class="form-control @error('name') is-invalid @enderror" name="name" type="text" id="name"  placeholder="Enter your Name" value="{{ old('name') }}">
+                                <input class="form-control @error('name') is-invalid @enderror" name="name"
+                                    type="text" id="name" placeholder="Enter your Name"
+                                    value="{{ old('name') }}">
                                 @error('name')
                                     <span class="invalid-feedback text-danger" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -52,7 +56,9 @@
 
                             <div class="form-group mb-3">
                                 <label class="form-label" for="emailaddress">Email address</label>
-                                <input class="form-control @error('email') is-invalid @enderror" name="email" type="text" id="emailaddress"  placeholder="Enter your email" value="{{ old('email') }}">
+                                <input class="form-control @error('email') is-invalid @enderror" name="email"
+                                    type="text" id="emailaddress" placeholder="Enter your email"
+                                    value="{{ old('email') }}">
                                 @error('email')
                                     <span class="invalid-feedback text-danger" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -63,7 +69,9 @@
                             <div class="form-group mb-3">
                                 <a class='text-muted float-end' href='pages-recoverpw.html'><small></small></a>
                                 <label class="form-label" for="password">Password</label>
-                                <input class="form-control @error('password') is-invalid @enderror" name="password" type="password"  id="password" placeholder="Enter your password" value="{{ old('password') }}">
+                                <input class="form-control @error('password') is-invalid @enderror" name="password"
+                                    type="password" id="password" placeholder="Enter your password"
+                                    value="{{ old('password') }}">
                                 @error('password')
                                     <span class="invalid-feedback text-danger" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -74,13 +82,16 @@
                             <div class="form-group mb-3">
                                 <a class='text-muted float-end' href='pages-recoverpw.html'><small></small></a>
                                 <label class="form-label" for="password">Confirm Password</label>
-                                <input class="form-control @error('password') is-invalid @enderror" name="password_confirmation" type="password"  id="password" placeholder="Enter your password" value="{{ old('password') }}">
+                                <input class="form-control @error('password') is-invalid @enderror"
+                                    name="password_confirmation" type="password" id="password"
+                                    placeholder="Enter your password" value="{{ old('password') }}">
                             </div>
 
                             <div class="form-group mb-3">
                                 <div class="">
                                     <input class="form-check-input" type="checkbox" id="checkbox-signin" checked>
-                                    <label class="form-check-label ms-2" for="checkbox-signin">I accept <a href="#">Terms and Conditions</a></label>
+                                    <label class="form-check-label ms-2" for="checkbox-signin">I accept <a
+                                            href="#">Terms and Conditions</a></label>
                                 </div>
                             </div>
 
@@ -95,7 +106,8 @@
 
                 <div class="row mt-3">
                     <div class="col-12 text-center">
-                        <p class="text-white-50">Already have an account ? <a class='text-white font-weight-medium ms-1' href='{{ route('login') }}'>Log In</a></p>
+                        <p class="text-white-50">Already have an account ? <a
+                                class='text-white font-weight-medium ms-1' href='{{ route('login') }}'>Log In</a></p>
                     </div> <!-- end col -->
                 </div>
                 <!-- end row -->
@@ -113,4 +125,5 @@
 
 
 <!-- Mirrored from myrathemes.com/dashtrap/pages-register by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2024 03:40:33 GMT -->
+
 </html>

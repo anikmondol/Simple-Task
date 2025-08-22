@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use id;
+
 use App\Models\Expense;
 use Illuminate\Http\Request;
 

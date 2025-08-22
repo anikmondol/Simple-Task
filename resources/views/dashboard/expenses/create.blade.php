@@ -84,13 +84,13 @@
                 duration: 5000,
                 newWindow: true,
                 close: true,
-                gravity: "top", // `top` or `bottom`
-                position: "right", // `left`, `center` or `right`
-                stopOnFocus: true, // Prevents dismissing of toast on hover
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true
                 style: {
                     background: "linear-gradient(to right, #00b09b, #96c93d)",
                 },
-                onClick: function() {} // Callback after click
+                onClick: function() {} 
             }).showToast();
         </script>
     @endif
